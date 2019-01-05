@@ -1,0 +1,33 @@
+* 이 메모장은 포크 뜬 내 계정의 repository(git remote origin)에 push 하기 위해 만들어졌다.
+
+---------------------------------------------------------------------------------------
+
+최신개발 내용은 develop 브랜치에 두고 있다고 가정하자.
+develop 브랜치에 접근하여 최신 개발 내용을 가져올 때는 아래의 명령어를 사용한다.
+    
+    git pull --rebase upstream develop ( git pull 보다는 git pull --rebase를 사용하는게 커밋 히스토리 관리에 좋다.)
+
+
+git-flow 브랜치 전략에 따라 기존 develop 브랜치로부터 새로운 개발 이슈에 해당하는 feature 브랜치를 만들어 작업.
+이렇게 함으로써 기존에 잘 작동하는 개발 코드와 새로 변경될 개발 코드를 분리하고 각각 보존할 수 있다.
+
+feature 브랜치는 Git Flow 전략에서 지칭하는 단위 개발 브랜치를 보편적으로 가리키는 용어이다.
+브랜치의 이름을 지을 때 반드시 feature라는 이름을 사용해야만 하는 것은 아니다.
+
+새로운 개발을 위해 새 feature 브랜치를 생성해보자.
+이슈 번호가 'qa/123'일 경우, 아래와 같이 실행합니다.
+
+    $ git checkout -b qa/123
+    Switched to a new branch 'qa/123'
+
+커밋을 fork repository로 올리기
+
+    git push origin branch_name
+
+
+
+
+
+
+
+
